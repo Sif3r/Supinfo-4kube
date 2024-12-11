@@ -26,6 +26,12 @@ spec:
               value: production-microservice
           image: supinfo4kube/position-tracker:1.0.1
           name: fleetman-position-tracker
+          requests:
+              memory: "256Mi"  # Demande de mémoire
+              cpu: "0.5"       # Demande de CPU
+            limits:
+              memory: "512Mi"  # Limite mémoire
+              cpu: "1"         # Limite CPU
           ports:
             - containerPort: 8080
               protocol: TCP
