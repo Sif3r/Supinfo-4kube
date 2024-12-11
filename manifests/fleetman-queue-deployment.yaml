@@ -23,6 +23,12 @@ spec:
       containers:
         - image: supinfo4kube/queue:1.0.1
           name: fleetman-queue
+          requests:
+              memory: "256Mi"  # Demande de mémoire
+              cpu: "0.5"       # Demande de CPU
+            limits:
+              memory: "512Mi"  # Limite mémoire
+              cpu: "1"         # Limite CPU
           ports:
             - containerPort: 8161
               protocol: TCP
